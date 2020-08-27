@@ -5,7 +5,7 @@ export default class CustomerList extends LightningElement {
 
     customers = [];
     @api sobject = 'Lead';
-    
+
     errorMsg;
     msgForUser;
     wiredRecords;
@@ -21,6 +21,10 @@ export default class CustomerList extends LightningElement {
         } else if (value.data) {
             this.customers = value.data;
         }
+    }
+
+    handleSelect(event) {
+        console.log(event.detail);
     }
     
 }
